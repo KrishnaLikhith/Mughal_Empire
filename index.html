@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bubble Effect</title>
+</head>
+
+<body onselectstart="return false" oncut="return false" oncopy="return false" onpaste="return false"
+    ondrag="return false" ondrop="return false">
+    <section>
+        <h2>Mughal Empire Album</h2>
+    </section>
+    <script type="text/javascript">
+function createBubble(){
+    const section = document.querySelector('section')
+    const createElement = document.createElement('span')
+    var size = Math.random() * 60;
+
+    createElement.style.width = 20+ size + 'px';
+    createElement.style.height = 20+ size + 'px';
+    createElement.style.left = Math.random() * innerWidth + 'px';
+    section.appendChild(createElement);
+
+    setTimeout(() => {
+        createElement.remove()
+    },4000)
+}
+
+    setInterval(createBubble,50)
+
+    </script>
+</body>
+
+</html>
